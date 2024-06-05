@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class SumOfNaturalNumbersRecursion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a positive integer n
+        System.out.print("Enter a positive integer: ");
+        int n = scanner.nextInt();
+
+        // Validate input
+        if (n <= 0) {
+            System.out.println("Please enter a positive integer.");
+        } else {
+            // Calculate the sum using recursion
+            int sum = sumOfNaturalNumbers(n);
+            System.out.println("The sum of all natural numbers up to " + n + " is: " + sum);
+        }
+
+        scanner.close();
+    }
+
+    // Recursive method to calculate the sum of natural numbers
+    public static int sumOfNaturalNumbers(int n) {
+        if (n == 1) { // Base case
+            return 1;
+        } else {
+            return n + sumOfNaturalNumbers(n - 1); // Recursive case
+        }
+    }
+}
