@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class SumOfNaturalNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a positive integer n
+        System.out.print("Enter a positive integer: ");
+        int n = scanner.nextInt();
+
+        // Validate input
+        if (n <= 0) {
+            System.out.println("Please enter a positive integer.");
+        } else {
+            // Calculate the sum of all natural numbers up to n
+            int sum = (n * (n + 1)) / 2;
+            System.out.println("The sum of all natural numbers up to " + n + " is: " + sum);
+        }
+
+        scanner.close();
+    }
+}
