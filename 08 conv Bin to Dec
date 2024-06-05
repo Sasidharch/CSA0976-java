@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class BinaryToDecimal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a binary number
+        System.out.print("Enter a binary number: ");
+        String binaryString = scanner.nextLine();
+
+        // Validate input
+        if (!isBinary(binaryString)) {
+            System.out.println("Invalid input. Please enter a binary number.");
+        } else {
+            // Convert binary to decimal
+            int decimalNumber = binaryToDecimal(binaryString);
+            System.out.println("The decimal equivalent of binary number " + binaryString + " is: " + decimalNumber);
+        }
+
+        scanner.close();
+    }
+
+    // Method to validate if the input string is a binary number
+    public static boolean isBinary(String binaryString) {
+        for (char ch : binaryString.toCharArray()) {
+            if (ch != '0' && ch != '1') {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Method to convert binary to decimal
+    public static int binaryToDecimal(String binaryString) {
+        int decimalNumber = 0;
+        int length = binaryString.length();
+
+        for (int i = 0; i < length; i++) {
+            char binaryChar = binaryString.charAt(length - 1 - i);
+            if (binaryChar == '1') {
+                decimalNumber += Math.pow(2, i);
+            }
+        }
+
+        return decimalNumber;
+    }
+}
