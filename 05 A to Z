@@ -1,0 +1,8 @@
+public class DisplayAlphabets {
+    public static void main(String[] args) {
+        // Loop through the ASCII values of uppercase alphabets (A-Z)
+        for (char ch = 'A'; ch <= 'Z'; ch++) {
+            System.out.print(ch + " ");
+        }
+    }
+}
