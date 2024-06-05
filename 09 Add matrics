@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class MatrixAddition {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter the number of rows and columns
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+        System.out.print("Enter the number of columns: ");
+        int columns = scanner.nextInt();
+
+        // Initialize the matrices
+        int[][] matrix1 = new int[rows][columns];
+        int[][] matrix2 = new int[rows][columns];
+        int[][] sumMatrix = new int[rows][columns];
+
+        // Read the first matrix
+        System.out.println("Enter the elements of the first matrix:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                matrix1[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Read the second matrix
+        System.out.println("Enter the elements of the second matrix:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                matrix2[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Add the two matrices
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                sumMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+
+        // Print the resulting sum matrix
+        System.out.println("The resulting sum matrix is:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print(sumMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
