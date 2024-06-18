@@ -1,0 +1,26 @@
+import java.util.*;
+class Armstrong
+{
+public static void main(String args[])
+{
+	Scanner s=new Scanner(System.in);
+	System.out.print("enter n value:");
+	int n=s.nextInt();
+	int arm=0,rem;
+	int n1=n;
+	while(n1!=0)
+	{
+		rem=n1%10;
+		arm=arm+(rem*rem*rem);
+		n1=n1/10;
+	}
+	if(n==arm)
+	{
+		System.out.println("armstrong number");
+	}
+	else
+	{
+		System.out.println("Not armstrong number");
+	}
+}
+}
