@@ -1,0 +1,32 @@
+import java.util.*;
+class Interest2
+{
+int p,t,r;
+double si;
+void get(int x,int y,int z)
+{
+p=x;
+t=y;
+r=z;
+}
+void calculate()
+{
+si=(p*t*r)/100;
+}
+void display()
+{
+System.out.println("si :"+si);
+}
+public static void main(String args[])
+{
+Interest2 object=new Interest2();
+Scanner s=new Scanner(System.in);
+int a,b,c;
+a=s.nextInt();
+b=s.nextInt();
+c=s.nextInt();
+object.get(a,b,c);
+object.calculate();
+object.display();
+}
+}
