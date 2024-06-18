@@ -1,0 +1,29 @@
+import java.util.*;
+class Fibo
+{
+	public static void main(String args[])
+	{
+		int t1,t2,i,n,nt,sum=0;
+                t1=0;
+		t2=1;
+                nt=t1+t2;
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter size:");
+		n=s.nextInt();
+                System.out.println("The series:"+t1+t2);
+		for(i=2;i<n;i++)
+		{
+			
+                        System.out.println(""+nt);   
+                        if(i%2==0)
+			{
+			sum+=nt;
+			} 
+			t1=t2;
+			t2=nt;
+			nt=t1+t2;   
+		}
+                System.out.println(""+sum); 
+                              
+        }
+}
