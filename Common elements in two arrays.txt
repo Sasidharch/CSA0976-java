@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class DAY5COMMONELEMENTSINTWOARRAYOFPOSITIVEINTEGERS
+{
+    public static void main(String args[])
+    {
+        try {
+            Scanner input = new Scanner(System.in);
+            int a1, b1;
+System.out.print("Enter the size of array 1: ");
+            a1 = input.nextInt();
+            int a[] = new int[a1];
+System.out.println("Enter the elements into the array: ");
+            for (int i = 0; i< a1; i++) {
+                a[i] = input.nextInt();
+            }
+System.out.print("Enter the size of array 2: ");
+            b1 = input.nextInt();
+            int b[] = new int[b1];
+System.out.println("Enter the elements into the array: ");
+            for (int i = 0; i< b1; i++) {
+                b[i] = input.nextInt();
+            }
+
+            for (int i = 0; i< a1; i++) {
+                for (int j = 0; j < b1; j++) {
+                    if (a[i] > 0 && b[j] > 0) {
+                        if (a[i] == b[j])
+System.out.print("common elements "+a[i] + " ");
+                    }
+                    else
+                        throw new Exception();
+                }
+            }
+        }
+catch(Exception e)
+        {
+System.out.print("Enter a positive integer");
+        }
+
+
+    }
+}
